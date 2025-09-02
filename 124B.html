@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+        <style>
+
+            .result p{
+                display: inline;
+            }
+
+        </style>
+
+    </head>
+    <body id="temperature">
+        <h1>From &#8451; to &#8457;</h1>
+        <div>
+            <label for="celcius">Celcius:</label>
+            <input id="celcius" type="number" placeholder="Numerical value..." onclick="this.placeholder=''" />
+            <button onclick="convert()">Convert!</button>
+        </div>
+        <br>
+        <div class="result">
+            <p>Fahrenheit:</p>
+            <p id="fahrenheit"></p>
+        </div>
+
+        <script>
+
+            let celcius = document.getElementById('celcius')
+            let fahrenheit = document.getElementById('fahrenheit')
+
+            function convert() {
+                fahrenheit.innerHTML = celcius.valueAsNumber * 9/5 + 32;
+            }
+
+        </script>
+
+    </body>
+</html>
